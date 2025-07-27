@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://diego029929.github.io/Wist0001/sitemap.xml
