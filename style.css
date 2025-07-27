@@ -16,8 +16,8 @@
 
 body {
   font-family: var(--font-body);
-  background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)),
-              url("images/background.jpg") no-repeat center center fixed;
+  background: linear-gradient(rgba(255, 255, 255, 0.94), rgba(255, 255, 255, 0.94)),
+              url('https://images.unsplash.com/photo-1612832021074-17fa4bcf97e9?auto=format&fit=crop&w=1400&q=80') no-repeat center center fixed;
   background-size: cover;
   color: var(--text-dark);
   display: flex;
