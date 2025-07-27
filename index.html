@@ -3,199 +3,10 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Wist – Studio de Webdesign pour petits commerçants</title>
-  <meta name="description" content="Création de sites vitrines modernes et accessibles pour petits commerçants. Design responsive et optimisation SEO." />
+  <title>Wist – Studio de Webdesign</title>
+  <meta name="description" content="Création de sites vitrines modernes et accessibles pour petits commerçants." />
+  <link rel="stylesheet" href="style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Roboto&display=swap" rel="stylesheet">
-  <style>
-    /* Ton CSS existant ici... */
-    :root {
-      --text-dark: #1e1e1e;
-      --bg-light: #f5f7fa;
-      --accent: #000;
-      --radius: 20px;
-      --font-title: 'Playfair Display', serif;
-      --font-body: 'Roboto', sans-serif;
-    }
-
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    body {
-      font-family: var(--font-body);
-      background: var(--bg-light);
-      color: var(--text-dark);
-      display: flex;
-      flex-direction: column;
-      min-height: 100vh;
-    }
-
-    header {
-      background: white;
-      padding: 1.2rem 2rem;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.06);
-      position: sticky;
-      top: 0;
-      z-index: 10;
-    }
-
-    .logo {
-      font-family: var(--font-title);
-      font-size: 1.9rem;
-      font-weight: bold;
-      display: flex;
-      align-items: center;
-      cursor: pointer;
-    }
-
-    .logo span {
-      font-size: 2.2rem;
-      margin-right: 0.4rem;
-      transform: rotate(-20deg);
-    }
-
-    .icons {
-      display: flex;
-      gap: 1.2rem;
-    }
-
-    .button-link {
-      text-decoration: none;
-      color: white;
-      background-color: var(--accent);
-      padding: 0.7rem 1.4rem;
-      border-radius: var(--radius);
-      font-weight: 600;
-      transition: 0.3s ease;
-      font-size: 0.95rem;
-      cursor: pointer;
-    }
-
-    .button-link:hover {
-      background-color: #333;
-    }
-
-    .search-bar {
-      margin: 2rem auto;
-      max-width: 500px;
-      padding: 0 1rem;
-    }
-
-    .search-bar input {
-      width: 100%;
-      padding: 0.9rem 1.2rem;
-      border-radius: 40px;
-      border: 1px solid #ccc;
-      font-size: 1rem;
-      transition: 0.3s ease;
-    }
-
-    .search-bar input:focus {
-      border-color: var(--accent);
-      outline: none;
-    }
-
-    main {
-      text-align: center;
-      padding: 2rem 1rem;
-      flex-grow: 1;
-    }
-
-    main h1 {
-      font-family: var(--font-title);
-      font-size: 2.5rem;
-      margin-bottom: 1rem;
-    }
-
-    main p {
-      font-size: 1.1rem;
-      margin-bottom: 2rem;
-      color: #444;
-    }
-
-    .produits {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
-      gap: 2rem;
-      margin-top: 2rem;
-    }
-
-    .produit {
-      background: white;
-      padding: 2rem 1.5rem;
-      border-radius: var(--radius);
-      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-      cursor: pointer;
-    }
-
-    .produit:hover {
-      transform: translateY(-6px);
-      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
-    }
-
-    .produit h3 {
-      font-family: var(--font-title);
-      font-size: 1.4rem;
-      margin-bottom: 0.7rem;
-    }
-
-    .produit p {
-      color: #666;
-      font-size: 0.95rem;
-    }
-
-    .back-arrow {
-      display: inline-block;
-      margin: 1rem 0;
-      color: var(--text-dark);
-      font-weight: 500;
-      font-size: 0.95rem;
-      cursor: pointer;
-    }
-
-    .back-arrow:hover {
-      text-decoration: underline;
-    }
-
-    .page {
-      display: none;
-      opacity: 0;
-      transform: translateY(20px);
-      visibility: hidden;
-      transition: all 0.5s ease;
-    }
-
-    .page.active {
-      display: block;
-      opacity: 1;
-      transform: translateY(0);
-      visibility: visible;
-    }
-
-    a.link {
-      color: var(--accent);
-      text-decoration: underline;
-      font-weight: 500;
-    }
-
-    a.link:hover {
-      color: #333;
-    }
-
-    footer {
-      text-align: center;
-      padding: 2rem 1rem;
-      font-size: 0.9rem;
-      color: #666;
-      margin-top: auto;
-    }
-  </style>
 </head>
 <body>
 
@@ -256,7 +67,10 @@
           <h3>Mini Site 2</h3>
           <p>Page d’accueil interactive pour une boutique locale.</p>
         </div>
-        <!-- Mini Site 3 à ajouter plus tard -->
+        <div class="produit" onclick="openSite('#')">
+          <h3>Mini Site 3</h3>
+          <p>Landing créative pour une application mobile.</p>
+        </div>
       </div>
     </div>
 
@@ -267,15 +81,15 @@
       <div class="produits">
         <div class="produit">
           <h3>Pack Vitrine</h3>
-          <p>À partir de 79€ – site simple, responsive, 1 page, idéal pour petits commerçants.</p>
+          <p>À partir de 79€ – site simple, responsive, 1 page.</p>
         </div>
         <div class="produit">
           <h3>Pack Pro</h3>
-          <p>À partir de 249€ – jusqu’à 5 pages, design sur mesure, animations.</p>
+          <p>À partir de 249€ – design sur mesure, animations incluses.</p>
         </div>
         <div class="produit">
           <h3>Pack Premium</h3>
-          <p>À partir de 399€ – maintenance, sécurité, SEO, + options e-commerce.</p>
+          <p>À partir de 399€ – SEO, e-commerce, sécurité et plus.</p>
         </div>
       </div>
     </div>
@@ -285,7 +99,7 @@
       <span class="back-arrow" onclick="showPage('accueil')">&larr; Retour à l'accueil</span>
       <h1>Discutons ensemble</h1>
       <p>Écrivez-nous à <strong>wist0001@yahoo.com</strong></p>
-      <p>Ou retrouvez-nous sur Instagram :
+      <p>Instagram :
         <a href="https://instagram.com/wist.001" target="_blank" class="link">@wist.001</a>
       </p>
     </div>
