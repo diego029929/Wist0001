@@ -18,7 +18,7 @@ auto;
 body {
   font-family: var(--font-body);
   background: linear-gradient(rgba(255, 255, 255, 0.92), rgba(255, 255, 255, 0.92)),
-              url("./images/background-hero.jpg") no-repeat center center fixed;
+              url("./images/background.jpg") no-repeat center center fixed;
   background-size: cover;
   color: var(--text-dark);
   display: flex;
