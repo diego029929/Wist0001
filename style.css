@@ -1,8 +1,7 @@
 :root {
   --text-dark: #1e1e1e;
-  --bg-light: #f4f6f9;
+  --bg-light: #f5f7fa;
   --accent: #000;
-  --accent-light: #444;
   --radius: 20px;
   --font-title: 'Playfair Display', serif;
   --font-body: 'Roboto', sans-serif;
@@ -16,8 +15,8 @@
 
 body {
   font-family: var(--font-body);
-  background: linear-gradient(rgba(255, 255, 255, 0.94), rgba(255, 255, 255, 0.94)),
-              url('https://images.unsplash.com/photo-1612832021074-17fa4bcf97e9?auto=format&fit=crop&w=1400&q=80') no-repeat center center fixed;
+  background: linear-gradient(rgba(255, 255, 255, 0.92), rgba(255, 255, 255, 0.92)),
+              url("images/background.jpg") no-repeat center center fixed;
   background-size: cover;
   color: var(--text-dark);
   display: flex;
@@ -25,7 +24,7 @@ body {
   min-height: 100vh;
 }
 
-/* HEADER */
+/* Reste du CSS identique à ce que tu avais... */
 header {
   background: white;
   padding: 1.2rem 2rem;
@@ -40,7 +39,7 @@ header {
 
 .logo {
   font-family: var(--font-title);
-  font-size: 2rem;
+  font-size: 1.9rem;
   font-weight: bold;
   display: flex;
   align-items: center;
@@ -48,33 +47,32 @@ header {
 }
 
 .logo span {
-  font-size: 2.4rem;
-  margin-right: 0.5rem;
-  transform: rotate(-15deg);
-  color: var(--accent);
+  font-size: 2.2rem;
+  margin-right: 0.4rem;
+  transform: rotate(-20deg);
 }
 
 .icons {
   display: flex;
-  gap: 1rem;
+  gap: 1.2rem;
 }
 
 .button-link {
   text-decoration: none;
   color: white;
   background-color: var(--accent);
-  padding: 0.6rem 1.2rem;
+  padding: 0.7rem 1.4rem;
   border-radius: var(--radius);
   font-weight: 600;
   transition: 0.3s ease;
-  font-size: 0.9rem;
+  font-size: 0.95rem;
+  cursor: pointer;
 }
 
 .button-link:hover {
   background-color: #333;
 }
 
-/* SEARCH BAR */
 .search-bar {
   margin: 2rem auto;
   max-width: 500px;
@@ -95,7 +93,6 @@ header {
   outline: none;
 }
 
-/* MAIN */
 main {
   text-align: center;
   padding: 2rem 1rem;
@@ -104,20 +101,19 @@ main {
 
 main h1 {
   font-family: var(--font-title);
-  font-size: 2.4rem;
+  font-size: 2.5rem;
   margin-bottom: 1rem;
 }
 
 main p {
   font-size: 1.1rem;
-  color: #444;
   margin-bottom: 2rem;
+  color: #444;
 }
 
-/* PRODUITS */
 .produits {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
   gap: 2rem;
   margin-top: 2rem;
 }
@@ -147,7 +143,6 @@ main p {
   font-size: 0.95rem;
 }
 
-/* LIENS ET RETOUR */
 .back-arrow {
   display: inline-block;
   margin: 1rem 0;
@@ -186,12 +181,10 @@ a.link:hover {
   color: #333;
 }
 
-/* FOOTER */
 footer {
   text-align: center;
   padding: 2rem 1rem;
   font-size: 0.9rem;
-  color: #777;
-  background: #eee;
+  color: #666;
   margin-top: auto;
 }
