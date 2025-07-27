@@ -1,5 +1,5 @@
 :root {
-  --text-dark: #ffffff; /* texte blanc */
+  --text-dark: #1e1e1e; /* texte noir */
   --bg-light: #f5f7fa;
   --accent: #000;
   --radius: 20px;
@@ -15,7 +15,7 @@
 
 body {
   font-family: var(--font-body);
-  background: linear-gradient(135deg, #1e3c72, #2a5298); /* dégradé bleu foncé */
+  background: linear-gradient(135deg, #1e3c72, #2a5298); /* dégradé bleu */
   color: var(--text-dark);
   display: flex;
   flex-direction: column;
@@ -106,7 +106,7 @@ main h1 {
 main p {
   font-size: 1.1rem;
   margin-bottom: 2rem;
-  color: #ddd;
+  color: var(--text-dark);
 }
 
 .produits {
