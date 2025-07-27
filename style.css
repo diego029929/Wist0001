@@ -1,7 +1,11 @@
+to;
+}
 :root {
+  --text-light: #ffffff;
   --text-dark: #1e1e1e;
-  --bg-light: #f5f7fa;
-  --accent: #3f51b5; /* bleu doux */
+  --bg-gradient-start: #6a1b9a; /* violet foncé */
+  --bg-gradient-end: #8e24aa;   /* violet clair */
+  --accent: #ffffff;
   --radius: 20px;
   --font-title: 'Playfair Display', serif;
   --font-body: 'Roboto', sans-serif;
@@ -15,22 +19,21 @@
 
 body {
   font-family: var(--font-body);
-  background: linear-gradient(135deg, #e3f2fd, #f3e5f5);
+  background: linear-gradient(135deg, var(--bg-gradient-start), var(--bg-gradient-end));
   background-attachment: fixed;
   background-size: cover;
-  color: var(--text-dark);
+  color: var(--text-light);
   display: flex;
   flex-direction: column;
   min-height: 100vh;
 }
 
 header {
-  background: white;
-  padding: 1.2rem 2rem;
+  background: transparent;
+  padding: 1.5rem 2rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.06);
   position: sticky;
   top: 0;
   z-index: 10;
@@ -38,125 +41,51 @@ header {
 
 .logo {
   font-family: var(--font-title);
-  font-size: 1.9rem;
+  font-size: 2.1rem;
   font-weight: bold;
-  display: flex;
-  align-items: center;
+  color: var(--text-dark); /* le logo reste noir ou foncé */
   cursor: pointer;
-  color: var(--accent);
-}
-
-.logo span {
-  font-size: 2.2rem;
-  margin-right: 0.4rem;
-  transform: rotate(-20deg);
-}
-
-.icons {
-  display: flex;
-  gap: 1.2rem;
-}
-
-.button-link {
-  text-decoration: none;
-  color: white;
-  background-color: var(--accent);
-  padding: 0.7rem 1.4rem;
-  border-radius: var(--radius);
-  font-weight: 600;
-  transition: 0.3s ease;
-  font-size: 0.95rem;
-  cursor: pointer;
-}
-
-.button-link:hover {
-  background-color: #303f9f;
-}
-
-.search-bar {
-  margin: 2rem auto;
-  max-width: 500px;
-  padding: 0 1rem;
-}
-
-.search-bar input {
-  width: 100%;
-  padding: 0.9rem 1.2rem;
-  border-radius: 40px;
-  border: 1px solid #ccc;
-  font-size: 1rem;
-  transition: 0.3s ease;
-}
-
-.search-bar input:focus {
-  border-color: var(--accent);
-  outline: none;
 }
 
 main {
   text-align: center;
-  padding: 2rem 1rem;
+  padding: 4rem 1.5rem;
   flex-grow: 1;
 }
 
 main h1 {
   font-family: var(--font-title);
-  font-size: 2.5rem;
+  font-size: 3rem;
   margin-bottom: 1rem;
+  color: var(--accent);
 }
 
 main p {
-  font-size: 1.1rem;
-  margin-bottom: 2rem;
-  color: #444;
+  font-size: 1.2rem;
+  max-width: 600px;
+  margin: 0 auto;
+  color: var(--accent);
+  opacity: 0.9;
 }
 
-.produits {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
-  gap: 2rem;
+.button-link {
   margin-top: 2rem;
-  padding: 0 1rem;
-}
-
-.produit {
-  background: white;
-  padding: 2rem 1.5rem;
-  border-radius: var(--radius);
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  cursor: pointer;
-}
-
-.produit:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
-}
-
-.produit h3 {
-  font-family: var(--font-title);
-  font-size: 1.4rem;
-  margin-bottom: 0.7rem;
-}
-
-.produit p {
-  color: #666;
-  font-size: 0.95rem;
-}
-
-.back-arrow {
   display: inline-block;
-  margin: 1rem 0;
-  color: var(--text-dark);
-  font-weight: 500;
-  font-size: 0.95rem;
-  cursor: pointer;
+  text-decoration: none;
+  color: var(--bg-gradient-start);
+  background-color: var(--accent);
+  padding: 0.8rem 1.6rem;
+  border-radius: var(--radius);
+  font-weight: bold;
+  transition: 0.3s ease;
+  font-size: 1rem;
 }
 
-.back-arrow:hover {
-  text-decoration: underline;
+.button-link:hover {
+  background-color: #ddd;
 }
 
+/* les autres pages sont cachées au départ */
 .page {
   display: none;
   opacity: 0;
@@ -172,20 +101,10 @@ main p {
   visibility: visible;
 }
 
-a.link {
-  color: var(--accent);
-  text-decoration: underline;
-  font-weight: 500;
-}
-
-a.link:hover {
-  color: #303f9f;
-}
-
 footer {
   text-align: center;
   padding: 2rem 1rem;
   font-size: 0.9rem;
-  color: #666;
+  color: var(--accent);
   margin-top: auto;
 }
