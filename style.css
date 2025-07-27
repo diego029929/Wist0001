@@ -16,13 +16,16 @@
 
 body {
   font-family: var(--font-body);
-  background: var(--bg-light);
+  background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)),
+              url("images/background.jpg") no-repeat center center fixed;
+  background-size: cover;
   color: var(--text-dark);
   display: flex;
   flex-direction: column;
   min-height: 100vh;
 }
 
+/* HEADER */
 header {
   background: white;
   padding: 1.2rem 2rem;
@@ -71,6 +74,7 @@ header {
   background-color: #333;
 }
 
+/* SEARCH BAR */
 .search-bar {
   margin: 2rem auto;
   max-width: 500px;
@@ -91,6 +95,7 @@ header {
   outline: none;
 }
 
+/* MAIN */
 main {
   text-align: center;
   padding: 2rem 1rem;
@@ -109,6 +114,7 @@ main p {
   margin-bottom: 2rem;
 }
 
+/* PRODUITS */
 .produits {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -141,6 +147,7 @@ main p {
   font-size: 0.95rem;
 }
 
+/* LIENS ET RETOUR */
 .back-arrow {
   display: inline-block;
   margin: 1rem 0;
@@ -179,6 +186,7 @@ a.link:hover {
   color: #333;
 }
 
+/* FOOTER */
 footer {
   text-align: center;
   padding: 2rem 1rem;
